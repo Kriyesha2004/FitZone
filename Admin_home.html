@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | FitZone</title>
+    <link rel="stylesheet" href="CSS/admin.css">
+    <script defer src="js/admin.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="Admin_home.html"> Home Pages</a></li>
+            <li><a href="staff.php">Manage Staff</a></li>
+            <li><a href="manage_customer.php">Manage Customers</a></li>
+            <li><a href="home1.php">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome, Admin!</h1>
+        <p>Use the panel to manage FitZone's system.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Total Customers</h3>
+                <p id="customerCount">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Total Staff</h3>
+                <p id="staffCount">Loading...</p>
+            </div>
+        </div>
+
+        <div class="feedback-section">
+            <h2>User Feedback</h2>
+            <div id="feedbackContainer">
+                <!-- Feedbacks will be loaded here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('get_feedbacks.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("feedbackContainer").innerHTML = data;
+
+                    document.querySelectorAll('.heart').forEach(heart => {
+                        heart.addEventListener('click', () => {
+                            heart.classList.toggle('liked');
+                        });
+                    });
+                });
+        });
+    </script>
+
+</body>
+</html>

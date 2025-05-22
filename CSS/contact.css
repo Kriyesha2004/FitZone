@@ -1,0 +1,121 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container & Background Overlay */
+.container {
+    width: 100%;
+    padding: 40px;
+    background-image: url('../img/img9.avif'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.background-overlay {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 60px 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+}
+
+/* Contact Content */
+.contact-content {
+    text-align: center;
+}
+
+.contact-content h1 {
+    font-size: 36px;
+    color: #ffc400;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+}
+
+.info-item i {
+    font-size: 26px;
+    color: #ffc400;
+    min-width: 30px;
+}
+
+.info-item p {
+    color: #ddd;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.info-item strong {
+    color: #fff;
+}
+
+/* Social Icons */
+.icon1 {
+    margin-top: 20px;
+}
+
+.icons {
+    font-size: 28px;
+    color: #ffbb00;
+    margin: 0 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.icons:hover {
+    transform: scale(1.2);
+    color: #e6c000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .background-overlay {
+        padding: 30px 20px;
+    }
+
+    .contact-info {
+        gap: 20px;
+    }
+
+    .info-item i {
+        font-size: 22px;
+    }
+
+    .icons {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+}

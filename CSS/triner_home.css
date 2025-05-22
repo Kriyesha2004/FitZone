@@ -1,0 +1,54 @@
+/* Apply background image to the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/y_gym.jpeg') no-repeat center center/cover;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+/* Sidebar styling */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Content area styling */
+.content {
+    margin-left: 250px; 
+    padding: 20px;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 8px; 
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}

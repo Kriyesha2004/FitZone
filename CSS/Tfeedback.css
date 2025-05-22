@@ -1,0 +1,100 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: url('../img/cu.jpg') no-repeat center center/cover;
+}
+
+/* Feedback Section Container */
+.feedback-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    margin: auto;
+    margin-top: 40px; /* Applied margin-top as per your request */
+}
+
+.feedback-section h2 {
+    font-size: 22px; /* Increased font size */
+    margin-bottom: 15px;
+    color: #2c3e50; /* Set color for header */
+}
+
+/* Container for Feedback Items */
+#feedbackContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Feedback Box */
+.feedback {
+    background-color: #fff;
+    border-left: 5px solid #27ae60; /* Green border-left */
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    color: #444; /* Text color */
+}
+
+/* Heart Icon (Like Button) */
+.heart {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+    color: #ccc; /* Default heart color */
+    transition: color 0.3s ease;
+}
+
+/* Active (Liked) Heart */
+.heart.liked {
+    color: #e74c3c; /* Red when liked */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+    .feedback-section {
+        padding: 20px;
+    }
+
+    .feedback {
+        padding: 12px 15px;
+    }
+}
+.back-button {
+    display: inline-block;
+    margin-top: 500px;
+    padding: 10px 20px;
+    background-color: #e69214;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+    background-color: #27ae60;
+}
+

@@ -1,0 +1,132 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/cu.jpg') no-repeat center center/cover;
+    background-size: cover;
+    z-index: -1;
+
+}
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 1100px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.controls label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.controls select,
+.controls input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+thead th {
+    background-color: #f2aa1a;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #eef6fb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls select,
+    .controls input {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+.back-button {
+    display: inline-block;
+    margin-top: 500px;
+    padding: 10px 20px;
+    background-color: #e69214;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+    background-color: #27ae60;
+}
+
